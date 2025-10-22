@@ -1,0 +1,151 @@
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@font-face {
+  font-family: "SF Pro Rounded";
+  src: url("./fonnts.com-SF_Pro_Rounded_Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: "SF Pro Rounded", system-ui, sans-serif;
+  color: #fff;
+  background: #0e0e10;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { display: none; }
+
+.app {
+  width: 100%;
+  max-width: 420px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.scroll-area {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 16px 90px;
+}
+
+.logo {
+  font-size: 1.7em;
+  font-weight: 700;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.95);
+}
+
+.banner-scroll {
+  display: flex;
+  overflow-x: auto;
+  gap: 12px;
+  padding-bottom: 6px;
+}
+.banner-scroll::-webkit-scrollbar { display: none; }
+
+.banner-card {
+  flex: 0 0 85%;
+  height: 130px;
+  border-radius: 16px;
+  background: #1b1b1f;
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+h2 {
+  font-size: 1.05em;
+  margin: 24px 0 14px;
+  color: rgba(255,255,255,0.9);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.sticker {
+  background: #1b1b1f;
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05);
+  height: 155px;
+}
+
+/* Нижняя навигация */
+.bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 420px;
+  height: 70px;
+  background: #101012;
+  border-top: 1px solid rgba(255,255,255,0.07);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 50;
+}
+
+.material-symbols-rounded {
+  font-size: 30px;
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.bottom-nav button {
+  background: none;
+  border: none;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+}
+.bottom-nav button.active .material-symbols-rounded {
+  color: #fff;
+  transform: scale(1.15);
+}
+
+/* Профиль */
+.profile {
+  text-align: center;
+  padding-top: 40px;
+}
+.avatar {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 10px;
+  display: block;
+  border: 2px solid rgba(255,255,255,0.1);
+}
+.nickname {
+  font-size: 1.4em;
+  font-weight: 700;
+  color: #fff;
+  margin: 6px 0 4px;
+}
+.wallet {
+  font-size: 0.9em;
+  color: rgba(255,255,255,0.55);
+  background: rgba(255,255,255,0.05);
+  padding: 4px 10px;
+  border-radius: 10px;
+  display: inline-block;
+  user-select: text;
+}
+.section-title {
+  text-align: left;
+  font-size: 1em;
+  font-weight: 600;
+  margin: 30px 0 12px 10px;
+  color: rgba(255,255,255,0.85);
+  }
